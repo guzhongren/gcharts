@@ -1,0 +1,59 @@
+{
+    "autoFixOnSave": true,
+    "extends": ["tslint:recommended", "tslint:latest"],
+    "linterOptions": {
+        "exclude": [
+            "config/**/*.js",
+            "node_modules/**/*.ts",
+            "tsconfig.json"
+        ]
+    },
+    "rules": {
+        // "max-line-length": {
+        //   "options": [
+        //     120
+        //   ]
+        // },
+        "semicolon": [true, "never"],
+        "quotemark": [true, "single", "avoid-escape"],
+        "new-parens": true,
+        "no-arg": true,
+        "no-bitwise": true,
+        "no-conditional-assignment": true,
+        "no-consecutive-blank-lines": false,
+        "triple-equals": true,
+        "no-console": false,
+        "ordered-imports": false,
+        "no-submodule-imports": false,
+        "one-line": [
+            true,
+            "check-open-brace",
+            "check-catch",
+            "check-else",
+            "check-whitespace"
+        ],
+        "comment-format": [
+            true,
+            "check-space"
+        ],
+        "whitespace": [
+            true,
+            "check-branch",
+            "check-decl",
+            "check-operator",
+            "check-separator",
+            "check-type"
+        ],
+        "member-access": false,
+        "member-ordering": false,
+        "object-literal-sort-keys": false,
+        "jsx-boolean-value": false,
+        "jsx-no-lambda": false,
+        "no-this-assignment": false,
+        "prefer-conditional-expression": false,
+        "no-implicit-dependencies": false,
+        "jsx-no-bind": false,
+        "one-variable-per-declaration": false,
+        "no-empty-interface": false
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "outDir": "build/dist",
+        "moduleResolution": "node",
+        "module": "esnext",
+        "target": "es5",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "sourceMap": true,
+        "allowJs": true,
+        "jsx": "react",
+        "rootDir": "src/",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": false,
+        "strictNullChecks": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "paths": {
+            "@config/*": ["./src/config/*"],
+            "@components/*": ["./src/components/*"],
+            "@pages/*": ["./src/pages/*"],
+            "@utils/*": ["./src/utils/*"],
+            "@stories/*": ["./src/stories/*"],
+            "@layouts/*": ["./src/layouts/*"],
+            "@api/*": ["./src/api/*"],
+            "@assets/*": ["./src/assets/*"],
+            "@theme/*": ["./src/theme/*"],
+
+        }
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "scripts",
+        "acceptance-tests",
+        "webpack",
+        "jest",
+        "src/setupTests.ts",
+        "webpack.config.js",
+        "webpack.vendor.js",
+        "postcss.config.js",
+        "public/dist"
+    ]
+}
