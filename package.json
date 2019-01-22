@@ -7,10 +7,12 @@
     "parcel": "^1.11.0"
   },
   "devDependencies": {
+    "rimraf": "^2.6.3",
     "typescript": "^3.2.4"
   },
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "parcel index.html",
+    "build": "rimraf dist && parcel build index.html"
   },
   "repository": {
     "type": "git",
