@@ -12,6 +12,7 @@
     "jest": "^23.6.0",
     "jest-canvas-mock": "^1.1.1-beta.1",
     "jest-css-modules": "^1.1.0",
+    "less": "^3.9.0",
     "rimraf": "^2.6.3",
     "ts-jest": "^23.10.5",
     "tslint": "^5.12.1",
