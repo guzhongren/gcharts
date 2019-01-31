@@ -34,13 +34,8 @@ class Chart {
 			return
 		}
 		this.context.save()
-		// const font = option.font
 		this.drawRect(100, 50, 10 , 10, 50, 50, option.theme.color)
-		// this.context.font = `${font.size} ${font.style}`
-		// this.context.fillStyle = `${font.color}`
-		// this.context.fillText('chart', 150, 100)
-		// this.context.fillStyle = '#333'
-		// this.context.fillRect(0, 0, 100, 100)
+		this.drawFont('ter', 200, 200, 'red', 30)
 		this.context.save()
 	}
 	/**
@@ -49,11 +44,14 @@ class Chart {
 	 * @param {string} text 要标注的文字
 	 * @param {number} x 横坐标
 	 * @param {number} y 纵坐标
-	 * @param {string} color 字体颜色
+	 * @param {string} [color='#333'] 字体颜色
+	 * @param {number} [size=16] 字号
+	 * @param {string} [fontStyle='Arial'] 字体
 	 * @memberof Chart
 	 */
-	drawFont(text: string, x: number, y: number, color: string) {
+	drawFont(text: string, x: number, y: number, color: string = '#333', size: number = 16, fontStyle: string = 'Arial') {
 		this.context.save()
+		this.context.font = `${size}px ${fontStyle}`
 		this.context.fillStyle = color
 		this.context.fillText(text, x, y)
 	}
