@@ -10,9 +10,12 @@ const option = {
 	theme: {
 		color: 'green',
 	},
+	chart: {
+		xOffset: 80, // 百分比
+	},
 	data: {
 		xAxis: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
-		yAxis: [1, 2, 3, 4, 5, 6],
+		yAxis: [5, 20, 36, 10, 10, 20],
 	},
 }
 
