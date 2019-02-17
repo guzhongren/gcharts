@@ -4,6 +4,9 @@ const option = {
 		style: 'STheiti, SimHei',
 		color: 'red',
 	},
+	canvas: {
+		offset: 50,
+	},
 	theme: {
 		color: 'green',
 	},
