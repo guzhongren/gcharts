@@ -1,0 +1,73 @@
+{
+  "done": [
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "chart",
+      "creation_time": "2019-02-17T02:32:57.657Z",
+      "description": {
+        "content": "画字体api",
+        "mime": "text/markdown"
+      },
+      "id": "2",
+      "prio": 1,
+      "references": [],
+      "title": "drawFont",
+      "type": "emergency"
+    },
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "chart",
+      "creation_time": "2019-02-17T02:32:32.427Z",
+      "description": {
+        "content": "画矩形的api",
+        "mime": "text/markdown"
+      },
+      "id": "1",
+      "prio": 1,
+      "references": [],
+      "title": "drawReact",
+      "type": "emergency"
+    }
+  ],
+  "in-progress": [
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "chart",
+      "creation_time": "2019-02-17T02:33:58.366Z",
+      "description": {
+        "content": "画图表纵横坐标轴api及在图上画出纵横坐标轴",
+        "mime": "text/markdown"
+      },
+      "id": "3",
+      "prio": 1,
+      "references": [],
+      "title": "图表纵横坐标轴",
+      "type": "emergency"
+    }
+  ],
+  "testing": [],
+  "todo": [
+    {
+      "assignedTo": {
+        "name": "guzhongren"
+      },
+      "category": "chart",
+      "creation_time": "2019-02-17T02:34:50.659Z",
+      "description": {
+        "content": "实现柱状图展示",
+        "mime": "text/markdown"
+      },
+      "id": "4",
+      "prio": 1,
+      "references": [],
+      "title": "设计图表中柱状图的展示及实现",
+      "type": "emergency"
+    }
+  ]
+}
