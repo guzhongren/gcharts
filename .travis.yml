@@ -9,12 +9,9 @@ branches:
 
 install:
   - npm install -g yarn
-  - npm install -g codecov
   - yarn
 
 script:
-  # - yarn testCoverage
-  - codecov
   - yarn build
 
 after_success:
@@ -24,17 +21,8 @@ after_success:
   - git config --global user.email "${GIT_EMAIL}"
   - git add .
   - git commit -m "Update docs"
-  - git push --force --quiet "https://$GITHUB_TOKEN@$GH_REF" master:master
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
 
 env:
  global:
-   - GH_REF: github.com/guzhongren/gcharts.github.io.git
-
-# deploy:
-#   provider: pages # deploy to GitHub Pages
-#   skip_cleanup: true # don't clean generated site
-#   github_token: $GITHUB_TOKEN # provide the encrypted token
-#   keep-history: true
-#   on:
-#     branch: dev
-#   target_branch: master # optional, defaults to "gh-pages"
+   - GH_REF: github.com/guzhongren/gcharts.git
