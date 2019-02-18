@@ -12,7 +12,7 @@ install:
   - yarn
 
 script:
-  - yarn build
+  - yarn cdBuild
 
 after_success:
   - cd ./dist

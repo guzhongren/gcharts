@@ -19,8 +19,9 @@
     "typescript": "^3.2.4"
   },
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "rimraf dist && parcel build index.html",
+    "dev": "parcel index.html --open",
+    "build": "rimraf dist && parcel build index.html --no-source-maps --no-cache",
+    "cdBuild": "rimraf dist && parcel build index.html --no-source-maps --no-cache --public-url /gcharts",
     "lint": "yarn _typeCheck && yarn _tsLint",
     "testCoverage": "jest --coverage",
     "testLive": "jest --coverage && live-server ./coverage/lcov-report ",
