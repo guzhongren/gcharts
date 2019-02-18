@@ -11,5 +11,3 @@ yarn run dev
 ```shell
 yarn build
 ```
-
-**注意**
