@@ -9,11 +9,6 @@
         ]
     },
     "rules": {
-        // "max-line-length": {
-        //   "options": [
-        //     120
-        //   ]
-		// },
 		"indent": [true, "tabs", 2],
         "semicolon": [true, "never"],
         "quotemark": [true, "single", "avoid-escape"],

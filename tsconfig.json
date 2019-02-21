@@ -17,25 +17,12 @@
         "noImplicitReturns": true,
         "noImplicitThis": true,
         "noImplicitAny": false,
-        // "strictNullChecks": true,
         "suppressImplicitAnyIndexErrors": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "skipDefaultLibCheck": true,
         "skipLibCheck": true,
-        "allowSyntheticDefaultImports": true,
-        "paths": {
-            "@config/*": ["./src/config/*"],
-            "@components/*": ["./src/components/*"],
-            "@pages/*": ["./src/pages/*"],
-            "@utils/*": ["./src/utils/*"],
-            "@stories/*": ["./src/stories/*"],
-            "@layouts/*": ["./src/layouts/*"],
-            "@api/*": ["./src/api/*"],
-            "@assets/*": ["./src/assets/*"],
-            "@theme/*": ["./src/theme/*"],
-
-        }
+        "allowSyntheticDefaultImports": true
     },
     "include": [
         "./src/**/*",
