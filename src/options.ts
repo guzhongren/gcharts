@@ -5,17 +5,18 @@ const option = {
 		color: 'red',
 	},
 	canvas: {
-		offset: 50,
+		offset: 100,
 	},
 	theme: {
-		color: 'green',
+		// todo: bug
+		color: 'red',
 	},
 	chart: {
 		xOffset: 80, // 百分比
 	},
 	data: {
-		xAxis: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
-		yAxis: [5, 20, 36, 10, 99, 20],
+		xAxis: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子', '衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+		yAxis: [5, 20, 36, 10, 88, 20, 5, 20, 36, 10, 88, 20],
 	},
 }
 
