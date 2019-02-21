@@ -1,4 +1,4 @@
-import {IOption} from './options'
+import { IOption } from './options'
 
 class Chart {
 	context: CanvasRenderingContext2D
@@ -15,21 +15,37 @@ class Chart {
 		if (container) {
 			container.innerHTML = ''
 			this.canvas = document.createElement('canvas') as HTMLCanvasElement
-			this.canvas.width = window.innerWidth
-			this.canvas.height = window.innerHeight
+			this.resetCanvasSize()
 			container.appendChild(this.canvas)
 			this.context = this.canvas.getContext('2d')
 		} else {
 			console.error('请传入正确的id!')
 		}
 		window.onresize = () => {
-			this.canvas.width = window.innerWidth
-			this.canvas.height = window.innerHeight
+			this.resetCanvasSize()
 			this.setOption(this.option)
 		}
 	}
+	/**
+	 * 重置 canvas 画布的大小
+	 */
+	resetCanvasSize() {
+		this.canvas.width = window.document.body.clientWidth
+		this.canvas.height = window.document.body.clientHeight
+	}
+	/**
+	 * 入口，将数据放入配置并画图
+	 * @param option 配置信息
+	 */
 	setOption(option: IOption) {
 		this.option = option
+		this.draw(option)
+	}
+	/**
+	 * 画图
+	 * @param option 配置信息
+	 */
+	draw(option: IOption) {
 		// 验证数据结构
 		const data = option.data
 		if (data.xAxis.length !== data.yAxis.length) {
@@ -57,7 +73,6 @@ class Chart {
 		this.context.save()
 	}
 	drawXLabels(option: IOption, canvasSize: [number, number]) {
-		console.table(option)
 		const xAxis = option.data.xAxis
 		const halfWidth = this.getChartSize(option, canvasSize)[1] / xAxis.length / 2
 		const offset = option.canvas.offset
@@ -76,7 +91,7 @@ class Chart {
 		const partCount = Math.ceil(maxValue / Math.pow(10, realNumberCount - 1))
 		const chartSize = this.getChartSize(option, canvasSize)
 		const partHeight = chartSize[0] / partCount
-		for (let i = 0; i <= partCount; i ++) {
+		for (let i = 0; i <= partCount; i++) {
 			const tempYHeight = canvasSize[0] - canvasOffset - partHeight * i
 			const text = (i * Math.pow(10, realNumberCount - 1)).toString()
 			this.drawText(text, canvasOffset - this.option.canvas.offset / 2, tempYHeight, '#000')
