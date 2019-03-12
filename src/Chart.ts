@@ -77,7 +77,7 @@ class Chart {
 		const halfWidth = this.getChartSize(option, canvasSize)[1] / xAxis.length / 2
 		const offset = option.canvas.offset
 		const y = canvasSize[0] - offset
-		xAxis.map((item: string, index: number) => {
+		xAxis.forEach((item: string, index: number) => {
 			const x = offset + (2 * index + 1) * halfWidth
 			this.context.textAlign = 'center'
 			this.drawText(item, x, y + this.option.canvas.offset / 2)
@@ -156,6 +156,7 @@ class Chart {
 		const maxValue = Math.max(...yAxisData)
 		const maxValueString = maxValue.toString()
 		let realNumberCount = 0 // 实数部分的长度
+		// Bug科学计数法Math.flow
 		if (maxValueString.indexOf('.') === -1) {
 			realNumberCount = maxValueString.length
 		} else {

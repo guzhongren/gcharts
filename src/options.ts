@@ -8,7 +8,7 @@ const option = {
 		offset: 50,
 	},
 	theme: {
-		color: 'green',
+		color: 'red',
 	},
 	chart: {
 		xOffset: 80, // 百分比
